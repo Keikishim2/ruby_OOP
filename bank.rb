@@ -16,7 +16,6 @@ class BankAccount
         puts "Check Total: #{check_acc}"
         puts "Total Savings: #{savings_acc}"
         puts "Interest Rate %: #{@@interest_rate}"
-
     end
     private
     def bank_acc
