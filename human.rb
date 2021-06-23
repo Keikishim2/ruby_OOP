@@ -6,17 +6,15 @@ class Human
         @stealth = 3
         @health = 100
     end
+    def display_all
+        puts "Strength: #{@strength}, Intelligence: #{@intelligence}, Stealth: #{@stealth}, Health: #{@health}"
+    end
     def attack object
-        if object.class.ancestors.include?(Human)
-            object.health -= 15
-            puts "Decreased health by #{object.health}"
+        if object.class.ancestors.include? Human
+            object.health -= 20
         else
             puts "Attack another!"
         end
         self
     end
 end
-
-puts "Human:"
-human1 = Human.new
-human2 = Human.new
