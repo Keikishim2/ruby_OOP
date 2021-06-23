@@ -3,7 +3,7 @@ require_relative 'human'
 class Ninja < Human
     def initialilze
         show()
-        @stealth = 105
+        @stealth = 175
     end
     def steal object
         if object.class.ancestors.include? Human
@@ -13,7 +13,7 @@ class Ninja < Human
         end
         self
     end
-    def esc
+    def get_away
         @health -= 15
         self
     end

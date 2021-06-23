@@ -4,15 +4,15 @@ class Wizard < Human
     attr_accessor :strength, :intelligence, :stealth, :health
     def initialize
         show()
-        @health = 40
-        @intelligence = 60
+        @health = 50
+        @intelligence = 25
     end
-    def magic
-        @health += 20
+    def heal
+        @health += 10
         self
     end
 
-    def wiz object
+    def fireball object
         if object.class.ancestors.include? Human
             object.health -= 20
         else

@@ -7,20 +7,20 @@ class Samurai < Human
 
     def initialize
         show()
-        @health = 150
+        @health = 200
         @@num_of_samurai += 1
     end
-    def atk object
+    def death_blow object
         if object.class.ancestors.include? Human
             object.health = 0
         else
             puts "Attack another!"
         end
     end
-    def med
+    def meditate
         @health = 100
     end
-    def num
+    def how_many
         puts "Samurai: #{@@num_of_samurai}"
     end
 
